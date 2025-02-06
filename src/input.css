@@ -10,6 +10,19 @@
     -webkit-backface-visibility: hidden;
   }
 
+  .lazyload {
+    filter: blur(10px);
+    transition: filter 1s;
+  }
+  
+  .lazyload:not([src]) {
+    visibility: hidden;
+  }
+  
+  .lazyload[src] {
+    filter: blur(0);
+  }
+
   .animate-wave {
     animation-name: wave;
     animation-duration: 2.5s; 
